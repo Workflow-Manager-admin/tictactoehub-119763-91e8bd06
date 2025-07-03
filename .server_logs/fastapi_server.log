@@ -1,54 +1,110 @@
+INFO:     Started server process [16271]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:3001 (Press CTRL+C to quit)
+INFO:     100.64.4.167:34632 - "HEAD /docs HTTP/1.1" 200 OK
+INFO:     100.64.4.167:34638 - "HEAD /docs HTTP/1.1" 200 OK
+INFO:     100.64.4.167:34644 - "GET /docs HTTP/1.1" 200 OK
+INFO:     100.64.4.167:34646 - "GET /docs HTTP/1.1" 200 OK
+INFO:     100.64.4.167:34648 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     100.64.4.167:34658 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     100.64.4.167:34662 - "HEAD /docs HTTP/1.1" 200 OK
+INFO:     100.64.4.167:34674 - "HEAD /docs HTTP/1.1" 200 OK
+INFO:     100.64.4.167:34678 - "GET /docs HTTP/1.1" 200 OK
+INFO:     100.64.4.167:34682 - "HEAD /docs HTTP/1.1" 200 OK
+INFO:     100.64.4.167:34692 - "HEAD /docs HTTP/1.1" 200 OK
+INFO:     100.64.4.167:34698 - "GET /docs HTTP/1.1" 200 OK
+INFO:     100.64.4.167:34716 - "HEAD /docs HTTP/1.1" 200 OK
+INFO:     100.64.4.167:34712 - "HEAD /docs HTTP/1.1" 200 OK
+INFO:     100.64.4.167:34732 - "GET /docs HTTP/1.1" 200 OK
+INFO:     100.64.4.167:45658 - "GET /docs HTTP/1.1" 200 OK
+INFO:     100.64.4.167:45666 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     100.64.4.167:45668 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     100.64.4.167:39100 - "POST /api/users/register HTTP/1.1" 400 Bad Request
+INFO:     100.64.4.167:35816 - "POST /api/users/login HTTP/1.1" 422 Unprocessable Entity
+INFO:     100.64.4.167:35830 - "POST /api/users/login HTTP/1.1" 422 Unprocessable Entity
+(trapped) error reading bcrypt version
 Traceback (most recent call last):
-  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/bin/uvicorn", line 8, in <module>
-    sys.exit(main())
-             ^^^^^^
-  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/click/core.py", line 1161, in __call__
-    return self.main(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/click/core.py", line 1082, in main
-    rv = self.invoke(ctx)
-         ^^^^^^^^^^^^^^^^
-  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/click/core.py", line 1443, in invoke
-    return ctx.invoke(self.callback, **ctx.params)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/click/core.py", line 788, in invoke
-    return __callback(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/uvicorn/main.py", line 412, in main
-    run(
-  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/uvicorn/main.py", line 579, in run
-    server.run()
-  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/uvicorn/server.py", line 66, in run
-    return asyncio.run(self.serve(sockets=sockets))
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
-    return runner.run(main)
-           ^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
-    return self._loop.run_until_complete(task)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
-  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/uvicorn/server.py", line 70, in serve
-    await self._serve(sockets)
-  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/uvicorn/server.py", line 77, in _serve
-    config.load()
-  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/uvicorn/config.py", line 435, in load
-    self.loaded_app = import_from_string(self.app)
-                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/uvicorn/importer.py", line 22, in import_from_string
-    raise exc from None
-  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/uvicorn/importer.py", line 19, in import_from_string
-    module = importlib.import_module(module_str)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.12/importlib/__init__.py", line 90, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+INFO:     100.64.4.167:42496 - "POST /api/users/register HTTP/1.1" 200 OK
+INFO:     100.64.4.167:42504 - "OPTIONS /api/games HTTP/1.1" 200 OK
+INFO:     100.64.4.167:42518 - "OPTIONS /api/games HTTP/1.1" 200 OK
+INFO:     100.64.4.167:42532 - "GET /api/games HTTP/1.1" 405 Method Not Allowed
+INFO:     100.64.4.167:42548 - "GET /api/games HTTP/1.1" 405 Method Not Allowed
+INFO:     100.64.4.167:42556 - "OPTIONS /api/games HTTP/1.1" 200 OK
+INFO:     100.64.4.167:42568 - "POST /api/games HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 187, in __call__
+    raise exc
+  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/fastapi/routing.py", line 291, in app
+    solved_result = await solve_dependencies(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/fastapi/dependencies/utils.py", line 640, in solve_dependencies
+    solved = await run_in_threadpool(call, **solved_result.values)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/starlette/concurrency.py", line 37, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/anyio/to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
-  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/src/api/main.py", line 4, in <module>
-    from sqlalchemy.orm import Session
-ModuleNotFoundError: No module named 'sqlalchemy'
+  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2470, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 967, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/src/api/deps.py", line 70, in get_current_user
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/jose/jwt.py", line 159, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/jose/jws.py", line 74, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "/home/kavia/workspace/code-generation/tictactoehub-119763-91e8bd06/tic_tac_toe_backend/venv/lib/python3.12/site-packages/jose/jws.py", line 180, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+                                    ^^^^^^^^^^
+AttributeError: 'Depends' object has no attribute 'rsplit'
