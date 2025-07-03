@@ -5,6 +5,7 @@ from sqlalchemy.orm import relationship, declarative_base
 import datetime
 from pydantic import BaseModel, Field, EmailStr
 from typing import Optional, List
+from pydantic import ConfigDict
 
 Base = declarative_base()
 
@@ -72,8 +73,7 @@ class UserInDB(BaseModel):
     username: str
     email: EmailStr
 
-    class Config:
-        orm_mode = True
+    model_config = ConfigDict(from_attributes=True)
 
 # PUBLIC_INTERFACE
 class GameCreate(BaseModel):
@@ -91,8 +91,7 @@ class MoveResponse(BaseModel):
     player: str
     position: int
 
-    class Config:
-        orm_mode = True
+    model_config = ConfigDict(from_attributes=True)
 
 # PUBLIC_INTERFACE
 class GameStateResponse(BaseModel):
@@ -103,5 +102,4 @@ class GameStateResponse(BaseModel):
     winner: Optional[str]
     moves: List[MoveResponse] = []
 
-    class Config:
-        orm_mode = True
+    model_config = ConfigDict(from_attributes=True)
