@@ -18,7 +18,8 @@ class User(Base):
     email = Column(String(128), unique=True, index=True, nullable=False)
     password_hash = Column(String(256), nullable=False)
     created_at = Column(DateTime, default=datetime.datetime.utcnow)
-    games = relationship("Game", back_populates="owner", cascade="all, delete")
+    # Remove ambiguous games/owner relationship to avoid SQLAlchemy mapping errors.
+    # You may add explicit relationships for games_as_x/games_as_o if needed, but not a broad 'games' link.
 
 class Game(Base):
     """Game database model."""
@@ -31,7 +32,10 @@ class Game(Base):
     current_turn = Column(String(1), default="X")
     winner = Column(String(1), nullable=True)   # "X", "O", "D" (Draw), or None
     board_state = Column(String(9), default=" " * 9)  # 9-character string, e.g. "X OX O   "
-    owner = relationship("User", back_populates="games", foreign_keys=[player_x_id])
+    # Removed ambiguous owner/games relationship.
+    # Optionally, you can add:
+    # player_x = relationship("User", foreign_keys=[player_x_id])
+    # player_o = relationship("User", foreign_keys=[player_o_id])
 
     moves = relationship("Move", back_populates="game", cascade="all, delete")
 
